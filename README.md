@@ -33,19 +33,19 @@ If you care about **robust, generalizable DRL for O-RAN resource management**, t
 
 We consider an O-RAN system with:
 
-- **Three slices**: eMBB, mMTC, URLLC, each with its own QoS metrics and priorities. :contentReference[oaicite:3]{index=3}  
+- **Three slices**: eMBB, mMTC, URLLC, each with its own QoS metrics and priorities.  
 - **Multiple DUs**, each acting as a **local MARL agent (actor)** controlling RB allocation for its users.
-- A **global critic (xApp)** in the near-RT RIC that aggregates experience and updates all actors. :contentReference[oaicite:4]{index=4}  
+- A **global critic (xApp)** in the near-RT RIC that aggregates experience and updates all actors. 
 
 Key ideas:
 
 1. **MARL + SAC architecture**
    - Each DU = one actor.
    - A centralized global critic runs at the near-RT RIC.
-   - SAC is used for continuous action learning; actions are later **thresholded** to binary RB allocation decisions for slicing + scheduling. :contentReference[oaicite:5]{index=5}  
+   - SAC is used for continuous action learning; actions are later **thresholded** to binary RB allocation decisions for slicing + scheduling.  
 
 2. **Task-Aware SAM (TA-SAM)**
-   - **SAM in the critic**: smooths the loss landscape and stabilizes value estimation across heterogeneous traffic and slice conditions. :contentReference[oaicite:6]{index=6}  
+   - **SAM in the critic**: smooths the loss landscape and stabilizes value estimation across heterogeneous traffic and slice conditions. 
    - **Selective SAM in the actors**:
      - We compute **TD-error variance** per actor as a proxy for task/environment complexity.
      - SAM is applied **only if** the TD-error variance exceeds a threshold.
@@ -53,7 +53,7 @@ Key ideas:
 
 3. **Dynamic ρ scheduling**
    - ρ starts **large** → encourages exploration in sharp/unstable areas.
-   - ρ is **decayed over time** → shifts toward exploitation and fine-tuning near flatter minima. :contentReference[oaicite:7]{index=7}  
+   - ρ is **decayed over time** → shifts toward exploitation and fine-tuning near flatter minima.
 
 ---
 
