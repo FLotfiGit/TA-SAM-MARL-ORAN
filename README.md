@@ -155,37 +155,37 @@ train_steps, eval_interval, batch_size, buffer_size
 
 We evaluate the following variants (as in the paper):
 
-** No-SAM: vanilla SAC MARL.**
+**No-SAM: vanilla SAC MARL.**
 
-** L2-reg: SAC + L2 weight regularization.**
+**L2-reg: SAC + L2 weight regularization.**
 
-** Actor-SAM: SAM only on actor networks. **
+**Actor-SAM: SAM only on actor networks.**
 
-** Critic-SAM: SAM only on the global critic.**
+**Critic-SAM: SAM only on the global critic.**
 
-** Both-SAM (TA-SAM): SAM on critic + selective SAM on actors (our full method). **
+**Both-SAM (TA-SAM): SAM on critic + selective SAM on actors (our full method).**
 
 ---
 
 ## Example runs:
 
-# Vanilla SAC
+ **Vanilla SAC**
 python -m marl.trainer --config configs/sac_baseline.yaml --exp_name sac_baseline
 
-# SAC + L2
+**SAC + L2**
 python -m marl.trainer --config configs/l2_baseline.yaml --exp_name sac_l2
 
-# Critic-only SAM
+**Critic-only SAM**
 python -m marl.trainer --config configs/critic_sam.yaml --exp_name critic_sam
 
-# Actor-only SAM
+**Actor-only SAM**
 python -m marl.trainer --config configs/actor_sam.yaml --exp_name actor_sam
 
-# Full TA-SAM (both + selective actor SAM + dynamic ρ)
+**Full TA-SAM (both + selective actor SAM + dynamic ρ)**
 python -m marl.trainer --config configs/tasam_dynamic_rho.yaml --exp_name tasam_full
 
 
-## We log (per episode / training window):
+**log (per episode / training window):**
 
 Average cumulative reward
 
@@ -261,6 +261,7 @@ Stay tuned and ⭐ the repo if you want to track updates.
 
 If you use this code or ideas from the paper, please cite:
 
+```text
 @ARTICLE{lotfi2025tasamoran,
   author={Lotfi, Fatemeh and Rajoli, Hossein and Afghah, Fatemeh},
   journal={IEEE Transactions on Machine Learning in Communications and Networking}, 
@@ -271,6 +272,7 @@ If you use this code or ideas from the paper, please cite:
   pages={1-1},
   keywords={Resource management;Open RAN;Network slicing;Dynamic scheduling;Wireless networks;Adaptation models;Complexity theory;Real-time systems;Optimization;Deep reinforcement learning;Open RAN;Deep reinforcement learning;Network slicing and scheduling;Sharpness aware minimization;Multi agent reinforcement learning},
   doi={10.1109/TMLCN.2025.3634994}}
+```
 
 ---
 
