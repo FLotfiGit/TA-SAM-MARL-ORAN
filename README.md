@@ -9,11 +9,11 @@ by *Fatemeh Lotfi, Hossein Rajoli, and Fatemeh Afghah* (IEEE Transactions on Mac
 
 ## 🚀 TL;DR
 
-- We study **joint network slicing and resource block (RB) allocation** in an **O-RAN** architecture with multiple Distributed Units (DUs) modeled as **multi-agent RL (MARL) actors** and a global critic at the near-RT RIC. :contentReference[oaicite:0]{index=0}  
+- We study **joint network slicing and resource block (RB) allocation** in an **O-RAN** architecture with multiple Distributed Units (DUs) modeled as **multi-agent RL (MARL) actors** and a global critic at the near-RT RIC. 
 - We enhance **Soft Actor-Critic (SAC)** with **Sharpness-Aware Minimization (SAM)** and propose **Task-Aware SAM (TA-SAM)**:
-  - SAM is applied **selectively** to actor networks based on **TD-error variance** (only “hard”/unstable agents get regularized). :contentReference[oaicite:1]{index=1}  
-  - A **dynamic ρ scheduling** controls the perturbation radius over training, improving the exploration–exploitation trade-off.
-- We show up to **≈22% improvement in resource allocation efficiency and QoS satisfaction** over conventional DRL baselines across diverse traffic and slice profiles. :contentReference[oaicite:2]{index=2}  
+  - SAM is applied **selectively** to actor networks based on **TD-error variance** (only “hard”/unstable agents get regularized).  
+  - A **dynamic ρ scheduling** controls the perturbation radius over training, improving the exploration-exploitation trade off.
+- We show up to **≈22% improvement in resource allocation efficiency and QoS satisfaction** over conventional DRL baselines across diverse traffic and slice profiles.
 
 If you care about **robust, generalizable DRL for O-RAN resource management**, this repo is for you.
 
