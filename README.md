@@ -96,13 +96,16 @@ TA-SAM-MARL-ORAN/
 
 ## ⚙️ Installation
 git clone https://github.com/FLotfiGit/TA-SAM-MARL-ORAN.git
+
 cd TA-SAM-MARL-ORAN
 
-# (recommended) create a virtual env or conda env
+# create a virtual env or conda env
 python -m venv .venv
+
 source .venv/bin/activate  # on Windows: .venv\Scripts\activate
 
 pip install --upgrade pip
+
 pip install -r requirements.txt
 
 
@@ -123,8 +126,11 @@ YAML / OmegaConf / hydra-core (if you use configs)
 ## Basic training command:
 
 python -m marl.trainer \
+
   --config configs/tasam_dynamic_rho.yaml \
+  
   --exp_name tasam_dynamic_rho_run1
+  
 
 
 ## Key config fields:
