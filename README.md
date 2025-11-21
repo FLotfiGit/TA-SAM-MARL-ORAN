@@ -58,7 +58,7 @@ Key ideas:
 ---
 
 ## 🧱 Repository Structure
-
+```text
 TA-SAM-MARL-ORAN/
 ├── configs/
 │   ├── tasam_dynamic_rho.yaml        # Main config for TA-SAM (dynamic ρ)
@@ -91,7 +91,7 @@ TA-SAM-MARL-ORAN/
 ├── requirements.txt
 ├── README.md
 └── LICENSE
-
+``` 
 ---
 
 ## ⚙️ Installation
